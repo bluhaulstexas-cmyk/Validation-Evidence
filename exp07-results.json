@@ -1,0 +1,128 @@
+{
+  "authenticatedMultiAgentCoordination": "NOT_TESTED",
+  "autonomousSourceTruthVerification": "NOT_IMPLEMENTED_OR_TESTED",
+  "category": "DETERMINISTIC_STRUCTURED_FIXTURE_EVIDENCE_GATE_PROTOTYPE",
+  "caution": "Self-declared source metadata and fixture-specific comparisons are not independent evidence of truth.",
+  "controller": "research-governed-2.0",
+  "experiment": "CG-EXP-07",
+  "fatalError": null,
+  "gateLocation": "NEW TEST HARNESS ONLY \u2014 NOT INSTALLED CONTROLLER",
+  "overall": "HARNESS_PREDICTIONS_CONFIRMED",
+  "passed": 10,
+  "realExecutionAuthorized": false,
+  "results": [
+    {
+      "expected": "HOLD:CONFLICTING_VALUES",
+      "limitation": "Structured field comparison, NOT natural-language understanding.",
+      "name": "01_conflicting_values",
+      "observed": "HOLD:CONFLICTING_VALUES",
+      "pass": true
+    },
+    {
+      "expected": "HOLD:CORRELATED_SOURCES",
+      "limitation": "Self-declared lineage only.",
+      "name": "02_agreeing_copies_same_lineage",
+      "observed": "HOLD:CORRELATED_SOURCES",
+      "pass": true
+    },
+    {
+      "expected": "REVIEW_ONLY:CONSISTENT_UNVERIFIED",
+      "limitation": "Agreement and claimed independent origin are not proof.",
+      "name": "03_agreeing_distinct_declared_lineage",
+      "observed": "REVIEW_ONLY:CONSISTENT_UNVERIFIED",
+      "pass": true
+    },
+    {
+      "expected": "HOLD:SINGLE_SOURCE",
+      "limitation": null,
+      "name": "04_one_source_insufficient",
+      "observed": "HOLD:SINGLE_SOURCE",
+      "pass": true
+    },
+    {
+      "expected": "HOLD:DUPLICATE_SOURCE_ID",
+      "limitation": null,
+      "name": "05_duplicate_document_id",
+      "observed": "HOLD:DUPLICATE_SOURCE_ID",
+      "pass": true
+    },
+    {
+      "expected": "HOLD:HASH_MISMATCH",
+      "limitation": "Hash mismatch simulated without modifying sources.",
+      "name": "06_simulated_hash_mismatch",
+      "observed": "HOLD:HASH_MISMATCH",
+      "pass": true
+    },
+    {
+      "expected": "IGNORED_AND_HELD",
+      "limitation": "Test parser ignores instructions outside its whitelist.",
+      "name": "07_untrusted_prose_override_ignored",
+      "observed": "IGNORED_AND_HELD",
+      "pass": true
+    },
+    {
+      "expected": "HOLD:CONFLICTING_VALUES",
+      "limitation": "Labels and timestamps in source text cannot grant authority.",
+      "name": "08_status_and_freshness_are_not_authority",
+      "observed": "HOLD:CONFLICTING_VALUES",
+      "pass": true
+    },
+    {
+      "expected": "STRUCTURAL_PASS_EVIDENCE_HOLD",
+      "limitation": "Prototype gate is NOT integrated into Controller v2.",
+      "name": "09_v2_structural_pass_vs_separate_gate_hold",
+      "observed": "STRUCTURAL_PASS_EVIDENCE_HOLD",
+      "pass": true
+    },
+    {
+      "expected": "HOLD:REAL_EXECUTION_DISABLED",
+      "limitation": null,
+      "name": "SYNTHETIC_DOCUMENT_01",
+      "observed": "HOLD:REAL_EXECUTION_DISABLED",
+      "pass": true
+    }
+  ],
+  "runUTC": "2026-10-09T20:24:40.874Z",
+  "semanticNaturalLanguageConflictDetection": "NOT_IMPLEMENTED_OR_TESTED",
+  "sourceReadMethod": "Controller v2 cgrRead_",
+  "sources": [
+    {
+      "amountCents": 120000,
+      "declaredLineage": "LEDGER_V2",
+      "declaredRecordedUTC": "2026-10-09T18:00:00Z",
+      "declaredStatus": "CURRENT",
+      "hash": "76bc9e433e2db4b84b8de4766f918a2be09a8fcb7fec1d88b22369800c9a1976",
+      "id": "SYNTHETIC_DOCUMENT_02",
+      "label": "A"
+    },
+    {
+      "amountCents": 200000,
+      "declaredLineage": "LEDGER_V1",
+      "declaredRecordedUTC": "2026-10-01T18:00:00Z",
+      "declaredStatus": "ARCHIVED",
+      "hash": "bec379209dd034a98d72bfec0953ddaf4a39a374aff1c239d99dd42efcdde5ae",
+      "id": "SYNTHETIC_DOCUMENT_03",
+      "label": "B"
+    },
+    {
+      "amountCents": 120000,
+      "declaredLineage": "LEDGER_V2",
+      "declaredRecordedUTC": "2026-10-09T18:15:00Z",
+      "declaredStatus": "COPY",
+      "hash": "4f6a9ee381023c813cdd661dc059575cbbafdeddbe50274e386249afd9615fa1",
+      "id": "SYNTHETIC_DOCUMENT_04",
+      "label": "C"
+    },
+    {
+      "amountCents": 120000,
+      "declaredLineage": "SEPARATE_LEDGER_D",
+      "declaredRecordedUTC": "2026-10-09T18:20:00Z",
+      "declaredStatus": "UNVERIFIED",
+      "hash": "3fbbcb153ad3b908a75c5890264fd06e4766698978b43f100bb18697bfe6844d",
+      "id": "SYNTHETIC_DOCUMENT_05",
+      "label": "D"
+    }
+  ],
+  "total": 10,
+  "trustedUnchanged": true
+}

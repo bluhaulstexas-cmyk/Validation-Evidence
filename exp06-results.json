@@ -1,0 +1,121 @@
+{
+  "authenticatedMultiAgentCoordination": "NOT_TESTED",
+  "cases": [
+    {
+      "configuredPoolCents": 120000,
+      "expected": "CONSTRAINTS_VALID",
+      "interpretation": "A $900 purchase is structurally valid under a $1,200 budget.",
+      "matchesExpected": true,
+      "name": "01_current_budget_one_purchase",
+      "observed": "CONSTRAINTS_VALID",
+      "retainedCents": 30000,
+      "selectedItems": [
+        "equipment"
+      ],
+      "unverified": [
+        "free_text",
+        "source_truth",
+        "general_conclusions"
+      ],
+      "verificationScope": [
+        "configured_integer_money",
+        "configured_items",
+        "configured_single_person_schedule"
+      ]
+    },
+    {
+      "configuredPoolCents": 120000,
+      "expected": "HOLD:RESERVE_FLOOR_VIOLATION",
+      "interpretation": "Combined spending of $1,600 exceeds the trusted $1,200 budget.",
+      "matchesExpected": true,
+      "name": "02_current_budget_combined_overspend",
+      "observed": "HOLD:RESERVE_FLOOR_VIOLATION",
+      "retainedCents": -40000,
+      "selectedItems": [
+        "equipment",
+        "outing"
+      ],
+      "unverified": null,
+      "verificationScope": null
+    },
+    {
+      "configuredPoolCents": 120000,
+      "expected": "HOLD:ARITHMETIC_MISMATCH",
+      "interpretation": "The proposed $400 remainder conflicts with the trusted budget.",
+      "matchesExpected": true,
+      "name": "03_stale_budget_math_against_current_config",
+      "observed": "HOLD:ARITHMETIC_MISMATCH",
+      "retainedCents": 40000,
+      "selectedItems": [
+        "equipment",
+        "outing"
+      ],
+      "unverified": null,
+      "verificationScope": null
+    },
+    {
+      "configuredPoolCents": 200000,
+      "expected": "CONSTRAINTS_VALID",
+      "interpretation": "Expected limitation: arithmetic may pass when the configured budget is itself incorrect. This does not verify source truth.",
+      "matchesExpected": true,
+      "name": "04_wrong_trusted_budget_allows_proposal",
+      "observed": "CONSTRAINTS_VALID",
+      "retainedCents": 40000,
+      "selectedItems": [
+        "equipment",
+        "outing"
+      ],
+      "unverified": [
+        "free_text",
+        "source_truth",
+        "general_conclusions"
+      ],
+      "verificationScope": [
+        "configured_integer_money",
+        "configured_items",
+        "configured_single_person_schedule"
+      ]
+    },
+    {
+      "expected": "HOLD:REAL_EXECUTION_DISABLED",
+      "interpretation": "The controller must not authorize real-world actions.",
+      "matchesExpected": true,
+      "name": "05_real_execution_disabled",
+      "observed": "HOLD:REAL_EXECUTION_DISABLED"
+    },
+    {
+      "expected": "UNVERIFIED",
+      "interpretation": "Structural validation does not establish the truth of source documents.",
+      "matchesExpected": true,
+      "name": "06_source_truth_remains_unverified",
+      "observed": "UNVERIFIED"
+    }
+  ],
+  "checksMatchingPrediction": 6,
+  "controllerVersion": "research-governed-2.0",
+  "executionType": "REAL_APPS_SCRIPT_PURE_VALIDATOR_PLUS_DRIVE_FIXTURE_READ",
+  "experiment": "CG-EXP-06",
+  "fatalError": null,
+  "fixtureMatched": true,
+  "overall": "EXPECTED_IMPLEMENTED_BEHAVIOR_CONFIRMED",
+  "realExecutionAuthorized": false,
+  "runUTC": "2026-10-09T20:13:23.829Z",
+  "semanticConflictDetection": "NOT_TESTED_NOT_IMPLEMENTED",
+  "sources": [
+    {
+      "fixture": "current",
+      "id": "SYNTHETIC_DOCUMENT_06",
+      "sha256": "3fbca40f51add031799baa682dd1288fc49ee3fa23ac71de154bcbfe946da376",
+      "title": "CG-EXP-06 SOURCE A \u2014 Current Synthetic Budget \u2014 NOT REAL"
+    },
+    {
+      "fixture": "archived",
+      "id": "SYNTHETIC_DOCUMENT_07",
+      "sha256": "d23e55ea41740da9d9c50a101e1a3394ffdee2ff65037dbab219584a5c19e0e8",
+      "title": "CG-EXP-06 SOURCE B \u2014 Archived Synthetic Budget \u2014 NOT REAL"
+    }
+  ],
+  "totalChecks": 6,
+  "trustedUnchanged": true,
+  "warning": "Matching predictions does not prove semantic conflict detection or source truth verification."
+}

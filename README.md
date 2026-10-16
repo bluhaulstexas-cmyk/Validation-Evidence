@@ -2,6 +2,11 @@
 
 This repository contains public research materials for two synthetic case studies: structured arithmetic validation and a separate deterministic evidence gate. It is an experimental record, not a product release or evidence of general AI reliability.
 
+## Current naming
+The related flagship project is now **Binder**, with the tagline **“A calmer mailbox.”** Earlier project names include CommonGround and Decision Desk; “Binder AI” is retired. **Binder Business** is the trades application, **Binder Personal** is a future addition, and the sub-brand endorsement is **“powered by Binder.”** Date Night remains a separate side project.
+
+[Tim Hauptrief](https://timhauptrief.com/) remains the personal brand behind the work. Historical experiment files retain their original names, dates, methods, and limitations. This naming update does not change any experimental result or establish product readiness.
+
 ## Materials
 - `exp06-prereg.md` and `exp07-prereg.md`: recorded plans and expected responses; timing has not been independently certified.
 - `exp06-results.json` and `exp07-results.json`: reported inputs and outcomes.
